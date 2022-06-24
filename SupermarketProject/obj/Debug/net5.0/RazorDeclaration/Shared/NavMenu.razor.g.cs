@@ -82,6 +82,13 @@ using SupermarketProject.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\_Imports.razor"
+using CoreBusiness;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +97,7 @@ using SupermarketProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Shared\NavMenu.razor"
+#line 33 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

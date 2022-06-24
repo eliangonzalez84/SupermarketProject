@@ -1,0 +1,12 @@
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\bin\Debug\net5.0\CoreBusiness.deps.json
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\bin\Debug\net5.0\CoreBusiness.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\bin\Debug\net5.0\ref\CoreBusiness.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\bin\Debug\net5.0\CoreBusiness.pdb
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.csproj.AssemblyReference.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.GeneratedMSBuildEditorConfig.editorconfig
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.AssemblyInfoInputs.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.AssemblyInfo.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.csproj.CoreCompileInputs.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\ref\CoreBusiness.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\CoreBusiness\obj\Debug\net5.0\CoreBusiness.pdb

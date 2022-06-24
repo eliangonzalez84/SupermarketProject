@@ -1,0 +1,17 @@
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\Plugins.DataStore.InMemory.deps.json
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\Plugins.DataStore.InMemory.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\ref\Plugins.DataStore.InMemory.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\Plugins.DataStore.InMemory.pdb
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\CoreBusiness.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\UseCases.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\UseCases.pdb
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\bin\Debug\net5.0\CoreBusiness.pdb
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.csproj.AssemblyReference.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.GeneratedMSBuildEditorConfig.editorconfig
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.AssemblyInfoInputs.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.AssemblyInfo.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.csproj.CoreCompileInputs.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.csproj.CopyComplete
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\ref\Plugins.DataStore.InMemory.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.InMemory\obj\Debug\net5.0\Plugins.DataStore.InMemory.pdb

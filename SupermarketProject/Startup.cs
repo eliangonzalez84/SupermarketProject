@@ -34,6 +34,7 @@ namespace SupermarketProject
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IViewCategoriesUseCase, ViewCategoriesUseCase>();
+            services.AddScoped<IAddCategoryUseCase, AddCategoryUseCase>();
 
         }
 

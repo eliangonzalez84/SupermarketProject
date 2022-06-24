@@ -64,3 +64,5 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\ref\SupermarketProject.dll
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\SupermarketProject.pdb
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\SupermarketProject.genruntimeconfig.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\AddCategoryComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\AddCategoryComponent.razor.g.cs

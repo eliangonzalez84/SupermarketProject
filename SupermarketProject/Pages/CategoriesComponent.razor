@@ -1,4 +1,6 @@
 ﻿@page "/categories"
+
+@inject NavigationManager navigationManager
 @inject UseCases.IViewCategoriesUseCase viewCategoryUseCase
 
 <h3>CRUD Categorias</h3>
@@ -21,12 +23,21 @@
         </tbody>
     </table>
 }
+<br />
+<button type="button" @onclick="OnClickAddCategory" class="btn btn-primary">Agregar categoria</button>
+
 
 @code {
     private IEnumerable<Category> categories;
+
     protected override void OnInitialized()
     {
         base.OnInitialized();
         categories = viewCategoryUseCase.Execute();
+    }
+
+    private void OnClickAddCategory()
+    {
+        navigationManager.NavigateTo("/addcategory");
     }
 }

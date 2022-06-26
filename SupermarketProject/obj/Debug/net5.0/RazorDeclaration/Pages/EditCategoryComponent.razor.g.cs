@@ -89,8 +89,8 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/categories")]
-    public partial class CategoriesComponent : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/editcategory/{categoryId}")]
+    public partial class EditCategoryComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,30 +98,44 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 32 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CategoriesComponent.razor"
+#line 32 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\EditCategoryComponent.razor"
        
-    private IEnumerable<Category> categories;
+    [Parameter]
+    public string CategoryId { get; set; }
+
+    private Category category;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        categories = viewCategoryUseCase.Execute();
+
+        category = new Category();
     }
 
-    private void OnClickAddCategory()
+    protected override void OnParametersSet()
     {
-        navigationManager.NavigateTo("/addcategory");
+        base.OnParametersSet();
+
+        if(int.TryParse(this.CategoryId, out int iCategoryId))
+        category = getCategoryByIdUseCase.Execute(iCategoryId);
     }
 
-    private void EditCategory(Category category)
+    private void OnValidSubmit()
     {
-        navigationManager.NavigateTo($"/editCategory/{category.CategoryId}");
+        editCategoryUseCase.Execute(this.category);
+        navigationManager.NavigateTo("/categories");
+    }
+
+    private void OnCancel()
+    {
+        navigationManager.NavigateTo("/categories");
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase viewCategoryUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase getCategoryByIdUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IEditCategoryUseCase editCategoryUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
     }
 }

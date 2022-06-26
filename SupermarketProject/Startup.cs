@@ -33,8 +33,10 @@ namespace SupermarketProject
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IViewCategoriesUseCase, ViewCategoriesUseCase>();
-            services.AddScoped<IAddCategoryUseCase, AddCategoryUseCase>();
+            services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUseCase>();
+            services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();
+            services.AddTransient<IEditCategoryUseCase, EditCategoryUseCase>();
+            services.AddTransient<IGetCategoryByIdUseCase, GetCategoryByIdUseCase>();
 
         }
 

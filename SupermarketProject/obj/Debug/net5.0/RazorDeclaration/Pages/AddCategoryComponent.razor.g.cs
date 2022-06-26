@@ -98,7 +98,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\AddCategoryComponent.razor"
+#line 31 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\AddCategoryComponent.razor"
        
     private Category category;
 
@@ -112,6 +112,11 @@ using CoreBusiness;
     private void OnValidSubmit()
     {
         addCategoryUseCase.Execute(category);
+        navigationManager.NavigateTo("/categories");
+    }
+
+    private void OnCancel()
+    {
         navigationManager.NavigateTo("/categories");
     }
 

@@ -98,7 +98,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 32 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CategoriesComponent.razor"
+#line 36 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CategoriesComponent.razor"
        
     private IEnumerable<Category> categories;
 
@@ -117,10 +117,16 @@ using CoreBusiness;
     {
         navigationManager.NavigateTo($"/editCategory/{category.CategoryId}");
     }
+    
+    private void DeleteCategory(int categoryId)
+    {
+        deleteCategoryUseCase.Delete(categoryId);
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IDeleteCategoryUseCase deleteCategoryUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase viewCategoryUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
     }

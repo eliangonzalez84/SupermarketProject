@@ -1,0 +1,48 @@
+﻿@page "/products"
+
+@inject UseCases.IViewProductsUseCase viewProductsUseCase
+@inject UseCases.IGetCategoryByIdUseCase getCategoryByIdUseCase
+
+<h3>Productos</h3>
+
+@if (products != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Categoria de Producto</th>
+                <th>Nombre de Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@getCategoryByIdUseCase.Execute(product.CategoryId)?.Name</td>
+                    <td>@product.Name</td>
+                    <td>@(Math.Round(product.Price, 2))</td>
+                    <td>@product.Quantity</td>
+                    @*<td>
+                        <button type="button" @onclick="@(() => EditProduct(category))" class="btn btn-link">Edit</button>
+                        <button type="button" @onclick="@(() => DeleteProduct(category.CategoryId))" class="btn btn-link">Delete</button>
+                    </td>*@
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+}
+
+@code {
+    private IEnumerable<Product> products;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        products = viewProductsUseCase.Execute();
+    }
+}

@@ -13,8 +13,8 @@ namespace Plugins.DataStore.InMemory
         public CategoryRepository()
         {
             categories = new List<Category>() { new Category { CategoryId = 1, Name = "Panaderia", Description = "Vende panes, Galletitas" } };
-            categories.Add(new Category { CategoryId = 1, Name = "Carniceria", Description = "Vende cortes de carne" });
-            categories.Add(new Category { CategoryId = 1, Name = "Electronica", Description = "Vende productos de electro" });
+            categories.Add(new Category { CategoryId = 2, Name = "Carniceria", Description = "Vende cortes de carne" });
+            categories.Add(new Category { CategoryId = 3, Name = "Electronica", Description = "Vende productos de electro" });
         }
 
         public void AddCategory(Category category)

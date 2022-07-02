@@ -68,3 +68,5 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\AddCategoryComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\EditCategoryComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\EditCategoryComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\ProductsComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\ProductsComponent.razor.g.cs

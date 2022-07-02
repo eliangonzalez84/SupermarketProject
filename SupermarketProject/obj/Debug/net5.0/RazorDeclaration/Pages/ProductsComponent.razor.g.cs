@@ -89,8 +89,8 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/categories")]
-    public partial class CategoriesComponent : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/products")]
+    public partial class ProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,43 +98,22 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CategoriesComponent.razor"
+#line 39 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\ProductsComponent.razor"
        
-    private IEnumerable<Category> categories;
+    private IEnumerable<Product> products;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        LoadCategories();
-    }
 
-    private void OnClickAddCategory()
-    {
-        navigationManager.NavigateTo("/addcategory");
-    }
-
-    private void EditCategory(Category category)
-    {
-        navigationManager.NavigateTo($"/editCategory/{category.CategoryId}");
-    }
-
-    private void DeleteCategory(int categoryId)
-    {
-        deleteCategoryUseCase.Delete(categoryId);
-        LoadCategories();
-    }
-
-    private void LoadCategories()
-    {
-        categories = viewCategoryUseCase.Execute()?.ToList();
+        products = viewProductsUseCase.Execute();
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IDeleteCategoryUseCase deleteCategoryUseCase { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase viewCategoryUseCase { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase getCategoryByIdUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsUseCase viewProductsUseCase { get; set; }
     }
 }
 #pragma warning restore 1591

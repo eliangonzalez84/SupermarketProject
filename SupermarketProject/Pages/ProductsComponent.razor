@@ -1,7 +1,9 @@
 ﻿@page "/products"
 
+@inject NavigationManager navigationManager
 @inject UseCases.IViewProductsUseCase viewProductsUseCase
 @inject UseCases.IGetCategoryByIdUseCase getCategoryByIdUseCase
+@inject UseCases.IDeleteProductUseCase deleteProductUseCase
 
 <h3>Productos</h3>
 
@@ -20,21 +22,23 @@
             @foreach (var product in products)
             {
                 <tr>
-                    <td>@getCategoryByIdUseCase.Execute(product.CategoryId)?.Name</td>
+                    <td>@getCategoryByIdUseCase.Execute(product.CategoryId.Value)?.Name</td>
                     <td>@product.Name</td>
-                    <td>@(Math.Round(product.Price, 2))</td>
+                    <td>@(Math.Round(product.Price.Value, 2))</td>
                     <td>@product.Quantity</td>
-                    @*<td>
-                        <button type="button" @onclick="@(() => EditProduct(category))" class="btn btn-link">Edit</button>
-                        <button type="button" @onclick="@(() => DeleteProduct(category.CategoryId))" class="btn btn-link">Delete</button>
-                    </td>*@
+                    <td>
+                            <button type="button" @onclick="@(() => EditProduct(product))" class="btn btn-link">Edit</button>
+                            <button type="button" @onclick="@(() => DeleteProduct(product.ProductId))" class="btn btn-link">Borrar</button>
+                    </td>
                 </tr>
             }
 
         </tbody>
     </table>
-
 }
+<br />
+<button type="button" @onclick="OnClickAddProduct" class="btn btn-primary">Agregar producto</button>
+
 
 @code {
     private IEnumerable<Product> products;
@@ -44,5 +48,20 @@
         base.OnInitialized();
 
         products = viewProductsUseCase.Execute();
+    }
+
+    private void EditProduct(Product product)
+    {
+        navigationManager.NavigateTo($"/editProduct/{product.ProductId}");
+    }
+
+    private void DeleteProduct(int productId)
+    {
+        deleteProductUseCase.Execute(productId);
+    }
+
+    private void OnClickAddProduct()
+    {
+        navigationManager.NavigateTo("/addProduct");
     }
 }

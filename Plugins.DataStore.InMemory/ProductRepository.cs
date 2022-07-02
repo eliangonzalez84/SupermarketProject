@@ -21,9 +21,48 @@ namespace Plugins.DataStore.InMemory
             };
         }
 
+        public void AddProduct(Product product)
+        {
+            if (products.Any(x => x.Name.Equals(product.Name, StringComparison.OrdinalIgnoreCase))) return;
+
+            if (products != null && products.Count > 0)
+            {
+                var maxId = products.Max(x => x.ProductId);
+                product.ProductId = maxId + 1;
+            }
+            else
+            {
+                product.ProductId = 1;
+            }
+
+            products.Add(product);
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            var productToUpdate = GetProductById(product.ProductId);
+            if (productToUpdate != null)
+            {
+                productToUpdate.Name = product.Name;
+                productToUpdate.CategoryId = product.CategoryId;
+                productToUpdate.Price = product.Price;
+                productToUpdate.Quantity = product.Quantity;
+            }
+        }
+
+        public Product GetProductById(int productId)
+        {
+            return products.FirstOrDefault(x => x.ProductId == productId);
+        }
+
         public IEnumerable<Product> GetProducts()
         {
             return products;
+        }
+
+        public void DeleteProduct(int productId)
+        {
+            products?.Remove(GetProductById(productId));
         }
     }
 }

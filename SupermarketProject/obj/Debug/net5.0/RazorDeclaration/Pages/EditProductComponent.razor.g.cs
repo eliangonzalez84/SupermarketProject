@@ -89,8 +89,8 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/products")]
-    public partial class ProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/editproduct/{productId}")]
+    public partial class EditProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,38 +98,50 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\ProductsComponent.razor"
+#line 49 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\EditProductComponent.razor"
        
-    private IEnumerable<Product> products;
+    [Parameter]
+    public string ProductId { get; set; }
+
+    private Product product;
+    private IEnumerable<Category> categories;
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
 
-        products = viewProductsUseCase.Execute();
+        product = new Product();
+        categories = viewCategoriesUseCase.Execute();
     }
 
-    private void EditProduct(Product product)
+    protected override void OnParametersSet()
     {
-        navigationManager.NavigateTo($"/editProduct/{product.ProductId}");
+        base.OnParametersSet();
+
+        if (int.TryParse(this.ProductId, out int iProductId))
+        {
+            var prod = getProductByIdUseCase.Execute(iProductId);
+            this.product = new Product { ProductId = prod.ProductId, Name = prod.Name, CategoryId = prod.CategoryId, Price = prod.Price, Quantity = prod.Quantity };
+        }
     }
 
-    private void DeleteProduct(int productId)
+    private void OnValidSubmit()
     {
-        deleteProductUseCase.Execute(productId);
+        editProductUseCase.Execute(this.product);
+        navigationManager.NavigateTo("/products");
     }
 
-    private void OnClickAddProduct()
+    private void OnCancel()
     {
-        navigationManager.NavigateTo("/addProduct");
+        navigationManager.NavigateTo("/products");
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IDeleteProductUseCase deleteProductUseCase { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetCategoryByIdUseCase getCategoryByIdUseCase { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductsUseCase viewProductsUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase viewCategoriesUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetProductByIdUseCase getProductByIdUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IEditProductUseCase editProductUseCase { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
     }
 }

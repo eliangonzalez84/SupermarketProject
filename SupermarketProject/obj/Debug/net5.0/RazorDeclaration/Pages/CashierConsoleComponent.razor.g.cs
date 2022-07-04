@@ -109,8 +109,6 @@ using CoreBusiness;
        
     private Product selectedProduct;
 
-    private Product sellProduct;
-
     private void SelectProduct(Product product)
     {
         selectedProduct = product;
@@ -118,7 +116,6 @@ using CoreBusiness;
 
     private void SellProduct(Product product)
     {
-        sellProduct = product;
     }
 
 #line default

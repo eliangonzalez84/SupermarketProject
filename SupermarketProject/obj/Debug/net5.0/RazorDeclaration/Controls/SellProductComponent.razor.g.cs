@@ -128,6 +128,10 @@ using CoreBusiness;
                 Quantity = 0
             };
         }
+        else
+        {
+            productToSell = null;
+        }
 
     }
 

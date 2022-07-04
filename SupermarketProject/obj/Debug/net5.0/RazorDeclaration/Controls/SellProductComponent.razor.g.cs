@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace SupermarketProject.Pages
+namespace SupermarketProject.Controls
 {
     #line hidden
     using System;
@@ -96,8 +96,7 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/cashier_console")]
-    public partial class CashierConsoleComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class SellProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,25 +104,57 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CashierConsoleComponent.razor"
+#line 35 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Controls\SellProductComponent.razor"
        
-    private Product selectedProduct;
+    private Product productToSell;
+    private string errorMessage;
+    [Parameter]
+    public Product SelectedProduct { get; set; }
 
-    private Product sellProduct;
+    [Parameter]
+    public EventCallback<Product> OnProductSold { get; set; }
 
-    private void SelectProduct(Product product)
+    protected override void OnParametersSet()
     {
-        selectedProduct = product;
+        base.OnParametersSet();
+        if (SelectedProduct != null)
+        {
+            productToSell = new Product
+            {
+                ProductId = SelectedProduct.ProductId,
+                Name = SelectedProduct.Name,
+                CategoryId = SelectedProduct.CategoryId,
+                Price = SelectedProduct.Price,
+                Quantity = 0
+            };
+        }
+
     }
 
-    private void SellProduct(Product product)
+    private void SellProduct()
     {
-        sellProduct = product;
+        var product = getProductByIdUseCase.Execute(productToSell.ProductId);
+        if (productToSell.Quantity <= 0)
+        {
+            errorMessage = "La cantidad tiene que ser mayor a 0.";
+        }
+        else if (product.Quantity >= productToSell.Quantity)
+        {
+            OnProductSold.InvokeAsync(productToSell);
+            errorMessage = string.Empty;
+            sellProductUseCase.Execute(productToSell.ProductId, productToSell.Quantity.Value);
+        }
+        else
+        {
+            errorMessage = $"{product.Name} cuenta con un existente de {product.Quantity}. Ingrese una cantidad a vender acorde.";
+        }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.ISellProductUseCase sellProductUseCase { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IGetProductByIdUseCase getProductByIdUseCase { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -104,9 +104,12 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Controls\SelectProductForSellingComponent.razor"
+#line 41 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Controls\SelectProductForSellingComponent.razor"
        
     private IEnumerable<Product> productsInCategory;
+    private int selectedProductId;
+    [Parameter]
+    public EventCallback<Product> OnProductSelected { get; set; }
 
     private int selectedCategoryId;
     private int SelectedCategoryId
@@ -128,6 +131,11 @@ using CoreBusiness;
         categories = viewCategoriesUseCase.Execute();
     }
 
+    private void OnSelectProduct(Product product)
+    {
+        selectedCategoryId = product.ProductId;
+        OnProductSelected.InvokeAsync(product);
+    }
 
 #line default
 #line hidden

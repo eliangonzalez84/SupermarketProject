@@ -74,3 +74,5 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\CashierConsoleComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Controls\SelectProductForSellingComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\CashierConsoleComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Controls\SellProductComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Controls\SellProductComponent.razor.g.cs

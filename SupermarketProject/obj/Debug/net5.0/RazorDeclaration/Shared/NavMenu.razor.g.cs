@@ -84,6 +84,13 @@ using SupermarketProject.Shared;
 #nullable disable
 #nullable restore
 #line 11 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\_Imports.razor"
+using SupermarketProject.Controls;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\_Imports.razor"
 using CoreBusiness;
 
 #line default
@@ -97,7 +104,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Shared\NavMenu.razor"
+#line 33 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

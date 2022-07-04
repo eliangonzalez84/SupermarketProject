@@ -25,8 +25,6 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\SupermarketProject.RazorComponent.input.cache
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\CategoriesComponent.razor.g.cs
-F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
-F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
@@ -39,8 +37,6 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\SupermarketProject.RazorCoreGenerate.cache
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\App.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\CategoriesComponent.razor.g.cs
-F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
-F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
@@ -74,3 +70,7 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\AddProductComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\EditProductComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\EditProductComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Controls\SelectProductForSellingComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\CashierConsoleComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Controls\SelectProductForSellingComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\CashierConsoleComponent.razor.g.cs

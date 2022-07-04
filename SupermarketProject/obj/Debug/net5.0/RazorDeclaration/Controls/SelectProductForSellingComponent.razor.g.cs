@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace SupermarketProject.Pages
+namespace SupermarketProject.Controls
 {
     #line hidden
     using System;
@@ -84,13 +84,19 @@ using SupermarketProject.Shared;
 #nullable disable
 #nullable restore
 #line 11 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\_Imports.razor"
+using SupermarketProject.Controls;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\_Imports.razor"
 using CoreBusiness;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class SelectProductForSellingComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,18 +104,36 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\Counter.razor"
+#line 42 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Controls\SelectProductForSellingComponent.razor"
        
-    private int currentCount = 0;
+    private IEnumerable<Product> productsInCategory;
 
-    private void IncrementCount()
+    private int selectedCategoryId;
+    private int SelectedCategoryId
     {
-        currentCount++;
+        get { return selectedCategoryId; }
+        set
+        {
+            selectedCategoryId = value;
+            productsInCategory = viewProductByCategoryId.Execute(value);
+            StateHasChanged();
+        }
     }
+    private IEnumerable<Category> categories;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        categories = viewCategoriesUseCase.Execute();
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewProductByCategoryId viewProductByCategoryId { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private UseCases.IViewCategoriesUseCase viewCategoriesUseCase { get; set; }
     }
 }
 #pragma warning restore 1591

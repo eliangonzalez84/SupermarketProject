@@ -37,7 +37,8 @@ namespace SupermarketProject
             
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            
+            services.AddScoped<ITransactionRepository, TransactionInMemoryRepository>();
+
             services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUseCase>();
             services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();
             services.AddTransient<IEditCategoryUseCase, EditCategoryUseCase>();
@@ -50,6 +51,7 @@ namespace SupermarketProject
             services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
             services.AddTransient<IViewProductByCategoryId, ViewProductByCategoryId>();
             services.AddTransient<ISellProductUseCase, SellProductUseCase>();
+            services.AddScoped<IRecordTransactionUseCase, RecordTransactionUseCase>();
 
         }
 

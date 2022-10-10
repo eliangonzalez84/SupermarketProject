@@ -105,7 +105,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 26 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CashierConsoleComponent.razor"
+#line 27 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CashierConsoleComponent.razor"
        
     private TodayTransactionsComponent transactionComponent;
 

@@ -19,5 +19,8 @@ namespace CoreBusiness
         public int? Quantity { get; set; }
         [Required]
         public double? Price { get; set; }
+
+        // 1 a Muchos EF core
+        public Category Category { get; set; }
     }
 }

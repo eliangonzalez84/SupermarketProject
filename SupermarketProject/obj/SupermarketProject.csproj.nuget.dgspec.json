@@ -154,6 +154,9 @@
             "projectReferences": {
               "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
                 "projectPath": "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj"
+              },
+              "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\UseCases\\UseCases.csproj": {
+                "projectPath": "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\UseCases\\UseCases.csproj"
               }
             }
           }

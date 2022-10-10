@@ -8,7 +8,7 @@ namespace Plugins.DataStore.InMemory
 {
     public class TransactionRepository : ITransactionRepository
     {
-        private List<Transaction> transactions;
+        private readonly List<Transaction> transactions;
         public TransactionRepository()
         {
             transactions = new List<Transaction>();

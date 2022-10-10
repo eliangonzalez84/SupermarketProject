@@ -1529,6 +1529,19 @@
         "runtime": {
           "bin/placeholder/CoreBusiness.dll": {}
         }
+      },
+      "UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CoreBusiness": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UseCases.dll": {}
+        }
       }
     }
   },
@@ -5802,6 +5815,11 @@
       "type": "project",
       "path": "../CoreBusiness/CoreBusiness.csproj",
       "msbuildProject": "../CoreBusiness/CoreBusiness.csproj"
+    },
+    "UseCases/1.0.0": {
+      "type": "project",
+      "path": "../UseCases/UseCases.csproj",
+      "msbuildProject": "../UseCases/UseCases.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5810,7 +5828,8 @@
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.17"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "UseCases >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5847,6 +5866,9 @@
           "projectReferences": {
             "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj": {
               "projectPath": "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\CoreBusiness\\CoreBusiness.csproj"
+            },
+            "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\UseCases\\UseCases.csproj": {
+              "projectPath": "F:\\Users\\User\\Documents\\VisualStudio\\Supermercado\\SupermarketManagement\\UseCases\\UseCases.csproj"
             }
           }
         }

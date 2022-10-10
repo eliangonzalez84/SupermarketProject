@@ -16,3 +16,5 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.SQL\obj\Debug\net5.0\ref\Plugins.DataStore.SQL.dll
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.SQL\obj\Debug\net5.0\Plugins.DataStore.SQL.pdb
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.SQL\obj\Debug\net5.0\Plugins.DataStore.SQL.genruntimeconfig.cache
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.SQL\bin\Debug\net5.0\UseCases.dll
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Plugins.DataStore.SQL\bin\Debug\net5.0\UseCases.pdb

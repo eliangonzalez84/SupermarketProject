@@ -42,9 +42,10 @@ namespace SupermarketProject
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<ITransactionRepository, TransactionRepository>();
+            //Voy a usar los repos con EF, no los de In Memory
+            services.AddScoped<ICategoryRepository, Plugins.DataStore.SQL.CategoryRepository>();
+            services.AddScoped<IProductRepository, Plugins.DataStore.SQL.ProductRepository>();
+            services.AddScoped<ITransactionRepository, Plugins.DataStore.SQL.TransactionRepository>();
 
             services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUseCase>();
             services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();

@@ -53,6 +53,7 @@ namespace SupermarketProject
             services.AddTransient<ISellProductUseCase, SellProductUseCase>();
             services.AddScoped<IRecordTransactionUseCase, RecordTransactionUseCase>();
             services.AddScoped<IGetTodayTransactionsUseCase, GetTodayTransactionsUseCase>();
+            services.AddScoped<IGetTransactionsUseCase, GetTransactionsUseCase>();
 
         }
 

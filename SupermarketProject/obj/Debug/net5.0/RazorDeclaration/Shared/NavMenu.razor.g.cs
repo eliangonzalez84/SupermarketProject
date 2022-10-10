@@ -104,7 +104,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Shared\NavMenu.razor"
+#line 38 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

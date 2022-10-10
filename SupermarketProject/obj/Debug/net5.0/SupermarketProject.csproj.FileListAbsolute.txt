@@ -78,3 +78,5 @@ F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\Supermar
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Controls\SellProductComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Controls\TodayTransactionsComponent.razor.g.cs
 F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Controls\TodayTransactionsComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\RazorDeclaration\Pages\TransactionsReportComponent.razor.g.cs
+F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\obj\Debug\net5.0\Razor\Pages\TransactionsReportComponent.razor.g.cs

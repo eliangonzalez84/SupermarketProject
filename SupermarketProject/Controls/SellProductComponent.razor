@@ -35,6 +35,9 @@
 @code {
     private Product productToSell;
     private string errorMessage;
+
+    [Parameter]
+    public string CashierName { get; set; }
     [Parameter]
     public Product SelectedProduct { get; set; }
 
@@ -64,6 +67,12 @@
 
     private void SellProduct()
     {
+        if (string.IsNullOrWhiteSpace(CashierName))
+        {
+            errorMessage = "Falta el nombre de cajero. No se puede realizar la transaccion.";
+            return;
+        }
+
         var product = getProductByIdUseCase.Execute(productToSell.ProductId);
         if (productToSell.Quantity <= 0)
         {
@@ -71,9 +80,11 @@
         }
         else if (product.Quantity >= productToSell.Quantity)
         {
+            if (string.IsNullOrWhiteSpace(CashierName)) throw new ApplicationException("Falta el nombre de cajero. No se puede realizar la transaccion.");
+
             OnProductSold.InvokeAsync(productToSell);
             errorMessage = string.Empty;
-            sellProductUseCase.Execute(productToSell.ProductId, productToSell.Quantity.Value);
+            sellProductUseCase.Execute(CashierName, productToSell.ProductId, productToSell.Quantity.Value);
         }
         else
         {

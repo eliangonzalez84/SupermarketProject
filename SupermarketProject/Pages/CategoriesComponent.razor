@@ -1,17 +1,21 @@
 ﻿@page "/categories"
+@attribute [Authorize(Policy = "AdminOnly")]
 
 @inject NavigationManager navigationManager
 @inject UseCases.IViewCategoriesUseCase viewCategoryUseCase
 @inject UseCases.IDeleteCategoryUseCase deleteCategoryUseCase
 
 <h3>CRUD Categorias</h3>
+<br />
 @if (categories != null)
 {
     <table class="table">
         <thead>
-        <th>Name</th>
-        <th>Description</th>
-        <th></th>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
         </thead>
         <tbody>
             @foreach (var category in categories)
@@ -20,8 +24,8 @@
                     <td>@category.Name</td>
                     <td>@category.Description</td>
                     <td>
-                    <button type="button" @onclick="@(() => EditCategory(category))" class="btn btn-link">Edit</button>
-                    <button type="button" @onclick="@(() => DeleteCategory(category.CategoryId))" class="btn btn-link">Delete</button>
+                        <button type="button" @onclick="@(() => EditCategory(category))" class="btn btn-link">Edit</button>
+                        <button type="button" @onclick="@(() => DeleteCategory(category.CategoryId))" class="btn btn-link">Delete</button>
                     </td>
                 </tr>
             }

@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\EditCategoryComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/editcategory/{categoryId}")]
     public partial class EditCategoryComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 32 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\EditCategoryComponent.razor"
+#line 33 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\EditCategoryComponent.razor"
        
     [Parameter]
     public string CategoryId { get; set; }
@@ -123,8 +130,8 @@ using CoreBusiness;
     {
         base.OnParametersSet();
 
-        if(int.TryParse(this.CategoryId, out int iCategoryId))
-        category = getCategoryByIdUseCase.Execute(iCategoryId);
+        if (int.TryParse(this.CategoryId, out int iCategoryId))
+            category = getCategoryByIdUseCase.Execute(iCategoryId);
     }
 
     private void OnValidSubmit()

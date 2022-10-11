@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\TransactionsReportComponent.razor"
+           [Authorize(Policy = "AdminOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/transactions")]
     public partial class TransactionsReportComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +112,7 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 73 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\TransactionsReportComponent.razor"
+#line 74 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\TransactionsReportComponent.razor"
        
     private string cashierName;
     private DateTime startDate;
@@ -116,7 +123,7 @@ using CoreBusiness;
     {
         transactions = GetTransactionsUseCase.Execute(cashierName, startDate, endDate);
     }
-    
+
     private void PrintReport()
     {
         JSRuntime.InvokeVoidAsync("print");

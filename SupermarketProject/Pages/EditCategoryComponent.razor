@@ -1,4 +1,5 @@
 ﻿@page "/editcategory/{categoryId}"
+@attribute [Authorize(Policy = "AdminOnly")]
 
 @inject NavigationManager navigationManager
 @inject UseCases.IEditCategoryUseCase editCategoryUseCase
@@ -46,8 +47,8 @@
     {
         base.OnParametersSet();
 
-        if(int.TryParse(this.CategoryId, out int iCategoryId))
-        category = getCategoryByIdUseCase.Execute(iCategoryId);
+        if (int.TryParse(this.CategoryId, out int iCategoryId))
+            category = getCategoryByIdUseCase.Execute(iCategoryId);
     }
 
     private void OnValidSubmit()

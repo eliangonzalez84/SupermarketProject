@@ -42,6 +42,12 @@ namespace SupermarketProject
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", p => p.RequireClaim("Position", "Admin"));
+                options.AddPolicy("CashierOnly", p => p.RequireClaim("Position", "Cashier"));
+            });
+
             //Voy a usar los repos con EF, no los de In Memory
             services.AddScoped<ICategoryRepository, Plugins.DataStore.SQL.CategoryRepository>();
             services.AddScoped<IProductRepository, Plugins.DataStore.SQL.ProductRepository>();
@@ -84,8 +90,12 @@ namespace SupermarketProject
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });

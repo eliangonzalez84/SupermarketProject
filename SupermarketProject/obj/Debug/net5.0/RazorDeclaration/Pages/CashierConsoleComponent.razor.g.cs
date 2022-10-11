@@ -96,6 +96,13 @@ using CoreBusiness;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CashierConsoleComponent.razor"
+           [Authorize(Policy = "CashierOnly")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/cashier_console")]
     public partial class CashierConsoleComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,16 +112,22 @@ using CoreBusiness;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 27 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CashierConsoleComponent.razor"
+#line 31 "F:\Users\User\Documents\VisualStudio\Supermercado\SupermarketManagement\SupermarketProject\Pages\CashierConsoleComponent.razor"
        
     private TodayTransactionsComponent transactionComponent;
 
     private Product selectedProduct;
     private string cashierName;
 
-    protected override void OnInitialized()
+    [CascadingParameter]
+    private Task<AuthenticationState> _authState { get; set; }
+
+    private AuthenticationState authState;
+
+    protected override async Task OnInitializedAsync()
     {
-        base.OnInitialized();
+        authState = await _authState;
+        cashierName = authState.User.Identity.Name;
     }
 
     protected override void OnAfterRender(bool firstRender)

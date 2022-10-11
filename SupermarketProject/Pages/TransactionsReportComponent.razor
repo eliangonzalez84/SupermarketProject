@@ -1,4 +1,5 @@
 ﻿@page "/transactions"
+@attribute [Authorize(Policy = "AdminOnly")]
 
 @inject IJSRuntime JSRuntime
 @inject UseCases.IGetTransactionsUseCase GetTransactionsUseCase
@@ -80,7 +81,7 @@
     {
         transactions = GetTransactionsUseCase.Execute(cashierName, startDate, endDate);
     }
-    
+
     private void PrintReport()
     {
         JSRuntime.InvokeVoidAsync("print");

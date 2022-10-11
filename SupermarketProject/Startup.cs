@@ -35,12 +35,6 @@ namespace SupermarketProject
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
-
-            services.AddDbContext<MarketContext>(options => 
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
 
             services.AddAuthorization(options =>
             {
@@ -49,9 +43,9 @@ namespace SupermarketProject
             });
 
             //Voy a usar los repos con EF, no los de In Memory
-            services.AddScoped<ICategoryRepository, Plugins.DataStore.SQL.CategoryRepository>();
-            services.AddScoped<IProductRepository, Plugins.DataStore.SQL.ProductRepository>();
-            services.AddScoped<ITransactionRepository, Plugins.DataStore.SQL.TransactionRepository>();
+            services.AddScoped<ICategoryRepository, Plugins.DataStore.InMemory.CategoryRepository>();
+            services.AddScoped<IProductRepository, Plugins.DataStore.InMemory.ProductRepository>();
+            services.AddScoped<ITransactionRepository, Plugins.DataStore.InMemory.TransactionRepository>();
 
             services.AddTransient<IViewCategoriesUseCase, ViewCategoriesUseCase>();
             services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();
